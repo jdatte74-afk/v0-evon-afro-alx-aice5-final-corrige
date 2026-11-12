@@ -1,0 +1,97 @@
+{
+  "dataset": {
+    "rows": 8068,
+    "columns": 11,
+    "missing_by_column": {
+      "ID": 0,
+      "Gender": 0,
+      "Ever_Married": 140,
+      "Age": 0,
+      "Graduated": 78,
+      "Profession": 124,
+      "Work_Experience": 829,
+      "Spending_Score": 0,
+      "Family_Size": 335,
+      "Var_1": 76,
+      "Segmentation": 0
+    },
+    "duplicate_rows_excluding_id": 417
+  },
+  "model": {
+    "algorithm": "GradientBoostingClassifier",
+    "validation": "StratifiedKFold(n_splits=5, shuffle=True, random_state=42)",
+    "accuracy": 0.5379276152702033,
+    "macro_f1": 0.5253538082861672,
+    "balanced_accuracy": 0.5284790697292785,
+    "majority_baseline": 0.2811105602379772,
+    "confusion_matrix_labels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "confusion_matrix": [
+      [
+        912,
+        389,
+        249,
+        422
+      ],
+      [
+        453,
+        662,
+        522,
+        221
+      ],
+      [
+        207,
+        361,
+        1133,
+        269
+      ],
+      [
+        455,
+        125,
+        55,
+        1633
+      ]
+    ],
+    "classification_report": {
+      "A": {
+        "precision": 0.4499259990133202,
+        "recall": 0.46247464503042596,
+        "f1-score": 0.4561140285071268,
+        "support": 1972.0
+      },
+      "B": {
+        "precision": 0.43070917371502926,
+        "recall": 0.356297093649085,
+        "f1-score": 0.38998527245949927,
+        "support": 1858.0
+      },
+      "C": {
+        "precision": 0.5783563042368556,
+        "recall": 0.5751269035532995,
+        "f1-score": 0.5767370832272843,
+        "support": 1970.0
+      },
+      "D": {
+        "precision": 0.6416502946954813,
+        "recall": 0.7200176366843033,
+        "f1-score": 0.6785788489507584,
+        "support": 2268.0
+      }
+    },
+    "cramers_v_bias_corrected": {
+      "Profession": 0.3317894378428055,
+      "Tranche d’âge": 0.32008100068686013,
+      "Dépenses": 0.3060346497682994,
+      "Situation matrimoniale": 0.29556889365915695,
+      "Diplôme": 0.25688101675733566,
+      "Taille de famille": 0.17148676408664373,
+      "Catégorie (Var_1)": 0.09621446659439399,
+      "Expérience pro.": 0.05953151462918559,
+      "Genre": 0.03232396506663119
+    }
+  }
+}
